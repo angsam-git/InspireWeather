@@ -1,0 +1,2788 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteX="290dp"
+    tools:layout_editor_absoluteY="1dp"
+    android:background="@drawable/background">
+    <ScrollView
+        android:id="@+id/main_layout"
+        tools:context=".MainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E7E5D9"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="290dp"
+            tools:layout_editor_absoluteY="1dp">
+
+
+            <!--Main UI Elements. The following TextViews and images represent data for the current day-->
+
+            <ImageView
+                android:id="@+id/mainbackground"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background2" />
+            <ImageView
+                android:id="@+id/mainbackgroundpt2"
+                android:layout_width="match_parent"
+                android:layout_height="700dp"
+                android:rotation="180"
+                android:scaleType="fitXY"
+                android:layout_marginTop="700dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/background2" />
+
+
+            <TextView
+                android:id="@+id/degrees"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="420dp"
+                android:shadowColor="#4D000000"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="10"
+                android:text="xx"
+                android:textAlignment="center"
+                android:textColor="#000000"
+
+                android:textSize="130sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:text="MY CITY"
+                android:textColor="#000000"
+                android:textSize="40sp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:maxLength="16"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/degSymbol"
+                android:layout_width="40dp"
+                android:layout_height="79dp"
+                android:layout_marginTop="424dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:shadowColor="#4D000000"
+                android:shadowDx="10"
+                android:shadowDy="10"
+                android:shadowRadius="10"
+                android:text="°"
+                android:textAlignment="center"
+                android:textColor="#000000"
+
+                android:textSize="100sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintStart_toEndOf="@+id/degrees"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/weatherIMG"
+                android:layout_width="251dp"
+                android:layout_height="266dp"
+                android:layout_marginTop="68dp"
+
+                android:src="@drawable/altlogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weatherTOP"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:text="WEATHER"
+                android:textAlignment="center"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/location" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="42dp"
+                android:layout_height="28dp"
+
+                android:layout_marginTop="12dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.08"
+                app:layout_constraintStart_toEndOf="@+id/degrees"
+                app:layout_constraintTop_toBottomOf="@+id/degSymbol"
+                app:srcCompat="@drawable/chance_of_rain" />
+
+            <TextView
+                android:id="@+id/chanceOfRain"
+                android:layout_width="62dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="512dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:text="100%"
+                android:textColor="#000000"
+
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="564dp"
+                android:text="JAN 1, 2000"
+                android:textColor="#000000"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.062"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="675dp"
+                android:text=" WEEK "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/quote"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="260dp"
+                android:autoSizeTextType="uniform"
+                android:shadowColor="#000000"
+                android:shadowDx="0"
+                android:shadowDy="4"
+                android:shadowRadius="4"
+                android:text="QUOTE_TEXT"
+                android:textAlignment="center"
+                android:textColor="#9CCE70"
+                android:textStyle="normal"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/weatherIMG" />
+
+            <TextView
+                android:id="@+id/author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="AUTHOR_TEXT"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/quote" />
+
+
+            <!-- This HorizontalScrollView is the scroll bar for the hourly forecast.
+                The outer LinearLayout represents the horizontal layout of all the cards.
+                There are 24 cards for a 24 hour forecast and each has an inner LinearLayout
+                to properly display data and image.
+            -->
+
+            <TextView
+                android:id="@+id/high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="464dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="54dp"
+                android:layout_marginBottom="10dp"
+                android:text="H"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@id/low"
+                app:layout_constraintEnd_toStartOf="@+id/degrees"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="54dp"
+                android:layout_marginBottom="40dp"
+                android:text="L"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/date"
+                app:layout_constraintEnd_toStartOf="@+id/degrees"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/high" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="409dp"
+                android:layout_height="3dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date" />
+
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="409dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="670dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="409dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="0dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/week" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="409dp"
+                android:layout_height="3dp"
+                android:layout_marginTop="80dp"
+                android:background="#000000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/week" />
+
+            <HorizontalScrollView
+                android:id="@+id/hourly_scroll_bar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="596dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view0"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly0"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly0"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly0"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly0"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly1"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly1"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/precip_hourly1"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view2"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly2"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly2"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly2"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view3"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly3"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly3"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly3"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view4"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly4"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly4"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly4"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly4"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view5"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly5"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly5"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly5"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+                            <TextView
+                                android:id="@+id/precip_hourly5"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view6"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly6"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly6"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly6"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly6"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view7"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly7"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly7"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly7"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly7"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view8"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly8"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly8"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly8"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly8"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view9"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly9"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly9"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly9"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly9"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view10"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly10"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly10"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly10"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly10"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view11"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly11"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly11"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly11"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly11"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view12"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly12"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly12"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly12"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly12"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view13"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly13"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly13"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly13"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly13"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view14"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly14"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly14"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly14"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly14"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view15"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly15"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly15"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly15"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly15"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view16"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly16"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly16"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly16"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly16"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view17"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly17"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly17"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly17"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly17"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view18"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly18"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly18"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly18"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly18"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view19"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly19"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly19"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly19"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly19"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view20"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly20"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly20"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly20"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly20"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view21"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly21"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly21"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly21"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly21"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view22"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly22"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly22"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly22"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly22"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_view23"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_hourly23"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_hourly23"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:layout_marginTop="-15dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/time_hourly23"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-15dp"
+                                android:layout_gravity="center"
+                                android:text="TIME"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_hourly23"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/daily_scroll_bar"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="706dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="0dp"
+                    android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/dailycard_view0"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginLeft="4dp"
+                    app:cardBackgroundColor="@android:color/transparent"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/temp_daily0"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:text="temp"
+                            android:layout_marginTop="-5dp"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/img_daily0"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-15dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:contentDescription="hi"
+                            android:src="@drawable/altlogo" />
+
+                        <TextView
+                            android:id="@+id/day0"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="-15dp"
+                            android:text="DAY"
+                            android:textAlignment="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/precip_daily0"
+                            android:layout_width="50dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="-54dp"
+                            android:layout_gravity="center"
+                            android:text=""
+                            android:textAlignment="center"
+                            android:textColor="#FFFFFF"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dailycard_view1"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_daily1"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="temp"
+                                android:layout_marginTop="-5dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_daily1"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/day1"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:text="DAY"
+                                android:layout_marginTop="-15dp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_daily1"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dailycard_view2"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_daily2"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5dp"
+                                android:text="temp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_daily2"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/day2"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:text="DAY"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_daily2"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dailycard_view3"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_daily3"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5dp"
+                                android:text="temp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_daily3"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/day3"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:text="DAY"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_daily3"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dailycard_view4"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_daily4"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5dp"
+                                android:text="temp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_daily4"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/day4"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:text="DAY"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_daily4"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dailycard_view5"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_daily5"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5dp"
+                                android:text="temp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_daily5"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/day5"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:text="DAY"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_daily5"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/dailycard_view6"
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginLeft="4dp"
+                        app:cardBackgroundColor="@android:color/transparent"
+                        app:cardElevation="0dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/temp_daily6"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-5dp"
+                                android:text="temp"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:id="@+id/img_daily6"
+                                android:layout_width="70dp"
+                                android:layout_height="70dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:layout_marginStart="0dp"
+                                android:layout_marginLeft="0dp"
+                                android:contentDescription="hi"
+                                android:src="@drawable/altlogo" />
+
+                            <TextView
+                                android:id="@+id/day6"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-15dp"
+                                android:text="DAY"
+                                android:textAlignment="center"
+                                android:textColor="#000000"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/precip_daily6"
+                                android:layout_width="50dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="-54dp"
+                                android:layout_gravity="center"
+                                android:text=""
+                                android:textAlignment="center"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/details_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="800dp"
+                android:text="MORE ON TODAY"
+                android:textSize = "30sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/feelsliketxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="850dp"
+                android:text="Feels Like"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sunrisetxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="900dp"
+                android:text="Sunrise"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.086"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sunsettxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="950dp"
+                android:text="Sunset"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/humiditytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1000dp"
+                android:text="Humidity"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/windtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1050dp"
+                android:text="Wind"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/visibilitytxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1100dp"
+                android:text="Visibility"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/uvindextxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1150dp"
+                android:text="UV Index"
+                android:textColor="#50763A"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/pressuretxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1200dp"
+                android:text="Pressure"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/dewpointtxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1250dp"
+                android:text="Dew Point"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/cloudcovertxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1300dp"
+                android:text="Cloud Cover"
+                android:textColor="#50763A"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:shadowColor="#FFFFFF"
+                android:shadowDx="0"
+                android:shadowDy="0"
+                android:shadowRadius="4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.085"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="895dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="945dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="995dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1045dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1095dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1145dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1195dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1245dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider13"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1295dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <View
+                android:id="@+id/divider14"
+                android:layout_width="match_parent"
+                android:layout_height="3dp"
+                android:layout_marginTop="1345dp"
+                android:background="#FFFFFF"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/feelslike_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="850dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="temp"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sunrise_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="900dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="sunr"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/sunset_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="950dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="suns"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/humidity_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1000dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="hum"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/wind_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1050dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="wind"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/visibility_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1100dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="vis"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/uvindex_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1150dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="uvi"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pressure_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1200dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="mmhg"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/dewpoint_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1250dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="dew"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/cloudcover_val"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1300dp"
+                android:shadowColor="#99000000"
+                android:shadowDx="0"
+                android:shadowDy="6"
+                android:shadowRadius="10"
+                android:text="cloud"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.875"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageButton
+                android:id="@+id/powered_by_darksky"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="#00000000"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/poweredbydarksky"
+                android:scaleType="fitXY"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="1345dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:id="@+id/powered_by_google"
+                android:layout_width="180dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="1360dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/powered_by_google_on_white" />
+
+            <ImageButton
+                android:id="@+id/settings_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="12dp"
+                android:background="#00000000"
+                android:scaleType="fitXY"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.975"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/settings_button" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory>
+        <SwitchPreferenceCompat
+            app:key="si units"
+            app:title="SI Derived Units"
+            app:summary="Will set to imperial when turned off."
+            app:icon="@drawable/si_icon"
+            app:defaultValue="false"/>
+
+        <SwitchPreferenceCompat
+            app:key="twentyfourclock"
+            app:title="24 Hour Clock"
+            app:summary="Will set to 12 hour clock when turned off."
+            app:icon="@drawable/time_icon"
+            app:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

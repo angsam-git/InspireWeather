@@ -1,7 +1,5 @@
 # InspireWeather
+Angel's first app
 
-InspireWeather is a motivating weather app that will give you an inspirational quote for you along with your weather report.
-
-This is my first android application. There are probably things I could have done better but overall this was mainly a learning experience for myself. The quality from here will only go up. - Angel Samuel Mendez
-
-Here are some UI Images: 
+This is my first app. It utilizes the Google Places API and Darksky API. This was a solo project. I designed all the images and pretty much everything else.
+-Angel Samuel Mendez
