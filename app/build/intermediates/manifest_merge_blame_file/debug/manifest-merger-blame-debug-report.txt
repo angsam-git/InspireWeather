@@ -35,42 +35,43 @@
 21-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:13:9-54
 22        android:supportsRtl="true"
 22-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:14:9-35
-23        android:theme="@style/AppTheme" >
-23-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:15:9-40
-24        <activity
-24-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:16:9-19:62
-25            android:name="com.angsam.inspireweather.SettingsActivity"
-25-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:17:13-45
-26            android:label="@string/title_activity_settings"
-26-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:18:13-60
-27            android:theme="@style/PreferencePage" />
-27-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:19:13-50
-28        <activity android:name="com.angsam.inspireweather.LoadingActivity" />
-28-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:20:9-53
-28-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:20:19-50
-29        <activity android:name="com.angsam.inspireweather.LocationFailed" />
-29-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:21:9-52
-29-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:21:19-49
-30        <activity android:name="com.angsam.inspireweather.ConnectionFailed" />
-30-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:22:9-54
-30-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:22:19-51
-31        <activity android:name="com.angsam.inspireweather.MainActivity" />
-31-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:23:9-50
-31-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:23:19-47
-32        <activity android:name="com.angsam.inspireweather.SplashScreen" >
-32-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:24:9-30:20
-32-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:24:19-47
-33            <intent-filter>
-33-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:25:13-29:29
-34                <action android:name="android.intent.action.MAIN" />
-34-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:26:17-69
-34-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:26:25-66
-35
-36                <category android:name="android.intent.category.LAUNCHER" />
-36-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:28:17-77
-36-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:28:27-74
-37            </intent-filter>
-38        </activity>
-39    </application>
-40
-41</manifest>
+23        android:testOnly="true"
+24        android:theme="@style/AppTheme" >
+24-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:15:9-40
+25        <activity
+25-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:16:9-19:62
+26            android:name="com.angsam.inspireweather.SettingsActivity"
+26-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:17:13-45
+27            android:label="@string/title_activity_settings"
+27-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:18:13-60
+28            android:theme="@style/PreferencePage" />
+28-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:19:13-50
+29        <activity android:name="com.angsam.inspireweather.LoadingActivity" />
+29-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:20:9-53
+29-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:20:19-50
+30        <activity android:name="com.angsam.inspireweather.LocationFailed" />
+30-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:21:9-52
+30-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:21:19-49
+31        <activity android:name="com.angsam.inspireweather.ConnectionFailed" />
+31-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:22:9-54
+31-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:22:19-51
+32        <activity android:name="com.angsam.inspireweather.MainActivity" />
+32-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:23:9-50
+32-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:23:19-47
+33        <activity android:name="com.angsam.inspireweather.SplashScreen" >
+33-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:24:9-30:20
+33-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:24:19-47
+34            <intent-filter>
+34-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:25:13-29:29
+35                <action android:name="android.intent.action.MAIN" />
+35-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:26:17-69
+35-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:26:25-66
+36
+37                <category android:name="android.intent.category.LAUNCHER" />
+37-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:28:17-77
+37-->C:\Users\angel\AndroidStudioProjects\InspireWeather\app\src\main\AndroidManifest.xml:28:27-74
+38            </intent-filter>
+39        </activity>
+40    </application>
+41
+42</manifest>
