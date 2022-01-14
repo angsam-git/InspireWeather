@@ -1,8 +1,6 @@
 # InspireWeather
 InspireWeather is a motivating weather app that provides you with an inspirational quote with your weather report. This application utilizes the DarkSky weather API along with the Google Places API.
 
-Here are some Images:
-
 <img src = "/images/InspireWeather.png" width = 700 > 
 <img src = "/images/inspireweatherangsam1.png" width = 300 >
 <img src = "/images/inspireweatherdetails2angsam.png" width = 300 >
